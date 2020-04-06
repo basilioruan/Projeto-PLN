@@ -36,7 +36,7 @@ def tratamentoAbreviacoes (texto):
 # Trata os emojis substituindo-os por ações descritas no discionário
 def tratamentoEmojis (texto):
     texto = emoji.demojize(texto, use_aliases=True)
-    lista = nltk.word_tokenize(texto)
+    lista = texto.split(" ")
     retorno = ""
 
     for i in range (len(lista)):
